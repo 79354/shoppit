@@ -1,0 +1,111 @@
+import { Order, Product } from "@/types/product";
+
+export const mockProducts: Product[] = [
+  {
+    id: '1',
+    name: 'Wireless Bluetooth Headphones',
+    price: 199.99,
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=300&fit=crop',
+    description: 'Premium wireless headphones with noise cancellation and superior sound quality. Perfect for music lovers and professionals.',
+    category: 'Electronics',
+    stock: 25,
+    featured: true,
+  },
+  {
+    id: '2',
+    name: 'Organic Cotton T-Shirt',
+    price: 29.99,
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=300&fit=crop',
+    description: 'Comfortable and sustainable organic cotton t-shirt. Available in multiple colors and sizes.',
+    category: 'Clothing',
+    stock: 50,
+    featured: true,
+  },
+  {
+    id: '3',
+    name: 'Smart Home Assistant',
+    price: 149.99,
+    image: 'https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?w=500&h=300&fit=crop',
+    description: 'Voice-controlled smart assistant for your home. Control lights, music, and more with simple voice commands.',
+    category: 'Electronics',
+    stock: 15,
+  },
+  {
+    id: '4',
+    name: 'Ergonomic Office Chair',
+    price: 299.99,
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=300&fit=crop',
+    description: 'Comfortable ergonomic office chair with lumbar support. Perfect for long work sessions.',
+    category: 'Home & Garden',
+    stock: 8,
+    featured: true,
+  },
+  {
+    id: '5',
+    name: 'Fitness Tracker Watch',
+    price: 249.99,
+    image: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=500&h=300&fit=crop',
+    description: 'Advanced fitness tracker with heart rate monitoring, GPS, and sleep tracking capabilities.',
+    category: 'Sports',
+    stock: 30,
+  },
+  {
+    id: '6',
+    name: 'Premium Coffee Beans',
+    price: 24.99,
+    image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=500&h=300&fit=crop',
+    description: 'Single-origin coffee beans roasted to perfection. Rich flavor profile with notes of chocolate and caramel.',
+    category: 'Home & Garden',
+    stock: 100,
+    featured: true,
+  },
+  {
+    id: '7',
+    name: 'Programming Fundamentals Book',
+    price: 49.99,
+    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&h=300&fit=crop',
+    description: 'Comprehensive guide to programming fundamentals. Perfect for beginners and intermediate developers.',
+    category: 'Books',
+    stock: 40,
+  },
+  {
+    id: '8',
+    name: 'Yoga Mat Premium',
+    price: 79.99,
+    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=300&fit=crop',
+    description: 'High-quality yoga mat with excellent grip and cushioning. Eco-friendly and durable.',
+    category: 'Sports',
+    stock: 0,
+  },
+];
+
+export const mockOrders: Order[] = [
+  {
+    id: 'ORD-001',
+    date: '2024-01-15',
+    total: 449.97,
+    status: 'delivered',
+    items: [
+      { productId: '1', productName: 'Wireless Bluetooth Headphones', quantity: 2, price: 199.99 },
+      { productId: '2', productName: 'Organic Cotton T-Shirt', quantity: 1, price: 29.99 },
+    ],
+  },
+  {
+    id: 'ORD-002',
+    date: '2024-01-20',
+    total: 149.99,
+    status: 'shipped',
+    items: [
+      { productId: '3', productName: 'Smart Home Assistant', quantity: 1, price: 149.99 },
+    ],
+  },
+  {
+    id: 'ORD-003',
+    date: '2024-01-25',
+    total: 299.99,
+    status: 'processing',
+    items: [
+      { productId: '4', productName: 'Ergonomic Office Chair', quantity: 1, price: 299.99 },
+    ],
+  },
+];
