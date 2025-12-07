@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include("storeapp.urls")),
     path('auth/', include("core.urls")),
     path('token_refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('support/', include('support.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
