@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Package, ShoppingCart, BarChart3, LogOut } from 'lucide-react';
+import { LayoutDashboard, Package, ShoppingCart, BarChart3, LogOut, MessageCircle } from 'lucide-react';
 import { 
   Sidebar,
   SidebarContent,
@@ -33,6 +33,7 @@ const AdminSidebar = () => {
     { name: 'Products', href: '/admin/products', icon: Package },
     { name: 'Orders', href: '/admin/orders', icon: ShoppingCart },
     { name: 'Analytics', href: '/admin/analytics', icon: BarChart3 },
+    { name: 'Support', href: '/support', icon: MessageCircle },
   ];
 
   const isActive = (href: string) => {

@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     # 'rest_framework_simplejwt',
     'corsheaders',
     'core',
+    'daphne',
+    'django.contrib.admin',
+    'channels',
     'support',
 ]
 
@@ -78,8 +81,33 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ecommerce.wsgi.application'
+ASGI_APPLICATION = 'ecommerce.wsgi.application'
+# Redis Channel Layers
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
+# Redis Cache
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379/1',
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        }
+    }
+}
+
+# WebSocket CORS
+CORS_ALLOW_CREDENTIALS = True
+
+# Firebase Cloud Messaging (Optional)
+FCM_SERVER_KEY = os.getenv('FCM_SERVER_KEY', '')
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases

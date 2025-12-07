@@ -8,6 +8,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { AdminProtectedRoute } from "./components/AdminProtectedRoute";
 import Loader from "./components/Loader";
+import SupportDashboard from "./pages/SupportDashboard";
 
 const queryClient = new QueryClient();
 
@@ -113,6 +114,14 @@ const App = () => (
                         <AdminAnalytics />
                       </AdminProtectedRoute>
                     }
+                  />
+                  <Route 
+                    path="/support" 
+                    element={
+                      <AdminProtectedRoute>
+                        <SupportDashboard />
+                      </AdminProtectedRoute>
+                    } 
                   />
                 </Route>
 
