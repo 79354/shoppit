@@ -1,0 +1,109 @@
+# -------------------------
+# Environment / Secrets
+# -------------------------
+.env
+storenv/
+*.env
+
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# -------------------------
+# Django
+# -------------------------
+*.log
+*.pot
+local_settings.py
+
+# If using SQLite locally (optional)
+# db.sqlite3
+
+# Static & media (if collected at runtime)
+# static/
+# staticfiles/
+# media/
+
+# -------------------------
+# Virtual Environments
+# -------------------------
+.venv/
+venv/
+ENV/
+env/
+
+# -------------------------
+# IDE / Editor
+# -------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -------------------------
+# OS-specific
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Migrations (optional)
+# Uncomment if you want to ignore migrations
+# */migrations/
+# !*/migrations/__init__.py
+
+# -------------------------
+# Test / Coverage / MyPy
+# -------------------------
+.coverage
+.coverage.*
+htmlcov/
+pytest_cache/
+.pytest_cache/
+*.cover
+coverage.xml
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# -------------------------
+# PyCharm
+# -------------------------
+*.iml
+*.ipr
+*.iws
+
+# # IDEs and Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# # OS Files
+# .DS_Store
+# Thumbs.db
+
+# # Migrations
+# # */migrations/
+# # !*/migrations/__init__.py
+
+# # pytest / coverage
+# .coverage
+# coverage.xml
+# *.cover
+# htmlcov/
+# .pytest_cache/
+
+# # mypy
+# .mypy_cache/
+# .dmypy.json
+# dmypy.json
