@@ -36,20 +36,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
     'storeapp',
     'rest_framework',
-    # 'rest_framework_simplejwt',
     'corsheaders',
     'core',
-    'daphne',
-    'django.contrib.admin',
-    'channels',
     'support',
 ]
 
@@ -103,11 +101,14 @@ CACHES = {
     }
 }
 
-# WebSocket CORS
-CORS_ALLOW_CREDENTIALS = True
 
-# Firebase Cloud Messaging (Optional)
-FCM_SERVER_KEY = os.getenv('FCM_SERVER_KEY', '')
+# Push Notifications Configuration (Firebase Cloud Messaging)
+FCM_SERVER_KEY = os.getenv('FCM_SERVER_KEY', '')  # Add to .env
+FCM_DJANGO_SETTINGS = {
+    "FCM_SERVER_KEY": FCM_SERVER_KEY,
+    "ONE_DEVICE_PER_USER": False,
+    "DELETE_INACTIVE_DEVICES": True,
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
@@ -120,7 +121,8 @@ DATABASES = {
 }
 
 
-
+# WebSocket CORS
+CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  
