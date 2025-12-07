@@ -11,8 +11,6 @@ import Loader from "./components/Loader";
 
 const queryClient = new QueryClient();
 
-/* ---------------------- Lazy Loaded Pages ---------------------- */
-
 // Store Pages
 const StorePage = lazy(() => import("./pages/StorePage"));
 const ProductDetailPage = lazy(() =>
@@ -45,7 +43,6 @@ const AdminAnalytics = lazy(() =>
 // Misc
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-/* -------------------------- App -------------------------- */
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
